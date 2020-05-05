@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ByteBlobCheckSum:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ByteBlobCheckSum_jar</output-path>
+    <root id="archive" name="ByteBlobCheckSum.jar">
+      <element id="module-output" name="ByteBlobCheckSum" />
+    </root>
+  </artifact>
+</component>
