@@ -6,7 +6,7 @@ public class ByteBlobCheckSum {
 
     public static String checkSum(byte[] byteBlob) throws Exception {
 
-        MessageDigest md = MessageDigest.getInstance("MD5");
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
 
         md.update(byteBlob);
 
@@ -16,10 +16,9 @@ public class ByteBlobCheckSum {
 
     private static String encodeHexString(byte[] byteArray) {
 
-        StringBuffer hexStringBuffer = new StringBuffer();
+        StringBuilder hexStringBuffer = new StringBuilder();
 
-        for (int i = 0; i < byteArray.length; i++)
-            hexStringBuffer.append(byteToHex(byteArray[i]));
+        for (byte b : byteArray) hexStringBuffer.append(byteToHex(b));
 
         return hexStringBuffer.toString();
 
